@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-around mb-10">
-      <div class="flex flex-row">
-        <div class="is-dark pr-10">
+      <div class="flex flex-col lg:flex-row">
+        <div class="is-dark lg:pr-10">
           <select required id="cluster" v-model="chosenCluster">
             <option class="text-gray-500" :value="null">Choose net...</option>
             <option :value="Cluster.Mainnet">Mainnet</option>

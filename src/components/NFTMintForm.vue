@@ -25,7 +25,7 @@
       <input
         type="number"
         id="maxSupply"
-        class="border-gray-400 border-solid border-2"
+        class="border-gray-400 border-solid border-2 w-3/4 md:w-auto"
         v-model="maxSupply"
       />
     </div>
@@ -125,6 +125,7 @@ export default defineComponent({
       // ths wallet address seems wrong
       // Sign transaction, broadcast, and confirm
       // ...signers: Array<Account>
+      // this is already leaked key
       const tempKeypair = Keypair.fromSecretKey(
         Uint8Array.from([
           208, 175, 150, 242, 88, 34, 108, 88, 177, 16, 168, 75, 115, 181, 199, 242, 120, 4, 78, 75, 19,

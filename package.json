@@ -10,6 +10,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^3.0.0-5",
     "@metaplex/js": "^4.1.0",
     "@pinata/sdk": "^1.1.23",
     "@solana/spl-token": "^0.1.8",

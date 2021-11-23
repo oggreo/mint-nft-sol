@@ -1,5 +1,5 @@
 <template>
-  <div id="home" class="grid grid-cols-12">
+  <div id="home" class="grid grid-cols-12 mb-10">
     <div class="col-start-2 col-end-12">
       <div class="border-gray-600 border-b-2 border-solid py-5 flex justify-start">
         <h1 class="text-xl">
@@ -9,12 +9,17 @@
           </span>
         </h1>
       </div>
+      <div class="grid grid-cols-10 mt-10">
+        <div class="px-4 py-2 text-4xl lg:text-7xl font-black col-start-4 col-end-8 text-left break-word bg-black text-white italic">
+          HOW TO <br> MINT YOUR NFT <br> ON SOLANA
+        </div>
+      </div>
       <div class="grid grid-cols-10 mt-6">
         <p class="col-start-2 col-end-10 my-6 break-word text-left">
-          This is a simple app to create an NFT on Solana blockchain.
+          This is a simple app to create an NFT on the Solana blockchain.
           It requires no pre-knowledge to use this app. The app is developed with Solana and metaplex js SDK.
           Front-end written with Vue.js.
-          Made it mainly for my learning purposes.
+          This is meant to be for learning purposes.
         </p>
       </div>
       <div class="grid grid-cols-10 rows-3">
@@ -24,7 +29,7 @@
         <p class="col-start-2 col-end-10 my-2 break-word text-left">
           To get started, first you need a SOLANA wallet.
           My recommendation is Phantom which can be downloaded
-          <a href="https://phantom.app/" class="font-bold underline">here</a>.
+          <a href="https://phantom.app/" class="font-bold underline" target="_blank">here</a>.
           If you already have one you can skip this part.
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left row-start-2">
@@ -47,7 +52,7 @@
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left">
           Next, you need to create an Arweave account.
-          Follow the instruction <a href="https://faucet.arweave.net/" class="font-bold underline">here</a> to get free AR.
+          Follow the instructions <a href="https://faucet.arweave.net/" class="font-bold underline" target="_blank">here</a> to get free AR.
           You'll need some to get started.
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left row-start-2">
@@ -55,7 +60,7 @@
           upload your assets to permaweb.
           <br>
           (Ideally this should be done by authenticating through the browser extension wallet but I haven't
-          figure out how to do that yet. If you know the way DM me on Twitter or send me a PR).
+          figured out how to do that yet. If you know how to, DM me on Twitter or send me a PR).
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left row-start-3">
           It usually takes a bit of time until they airdrop you some Arweave so don't panic if you don't get them
@@ -72,12 +77,12 @@
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left">
           The asset to be minted was stored on the permaweb, a decentralised immutable storage.
-          You can read more about permaweb <a href="https://arweave.medium.com/welcome-to-the-permaweb-ce0e6c73ddfb" class="font-bold underline">here</a>.
+          You can read more about permaweb <a href="https://arweave.medium.com/welcome-to-the-permaweb-ce0e6c73ddfb" class="font-bold underline" target="_blank">here</a>.
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left row-start-2">
-          The asset metadata has to conform to a certain standard <a href="https://arweave.medium.com/welcome-to-the-permaweb-ce0e6c73ddfb" class="font-bold underline">standard</a>.
-          You can check how the metadata of your asset by clicking 'Check here' next to the metadata url.
-          Assuming Arweave upload was succesful.
+          The asset metadata has to conform to a certain standard <a href="https://arweave.medium.com/welcome-to-the-permaweb-ce0e6c73ddfb" class="font-bold underline" target="_blank">standard</a>.
+          You can check the metadata of your asset by clicking 'Check here' next to the metadata url.
+          Assuming Arweave upload was successful.
         </p>
       </div>
       <div class="grid grid-cols-10 my-10">
@@ -97,7 +102,7 @@
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left">
           Now let's open your Phantom wallet and switch to Devnet. Currently chosen Mainnet uses 'actual' SOL
-          which is very expensive, so instead we can use 'testing' network that allows us to play around for free.
+          which is very expensive, so instead we can use a 'testing' network that allows us to play around for free.
           <br>
         </p>
         <ul class="col-start-2 col-end-10 my-2 break-word text-left row-start-2">
@@ -107,11 +112,9 @@
           <li>4. Change to Devnet</li>
         </ul>
         <p class="col-start-2 col-end-10 my-2 break-word text-left row-start-3">
-          Once you are done, air drop your self some SOL using a <a href="https://solfaucet.com/" class="font-bold underline">faucet</a>
-          and make yourself feel rich!
+          Once you are done, air-drop yourself some SOL using a <a href="https://solfaucet.com/" class="font-bold underline" target="_blank">faucet</a>
+          and make yourself feel rich (and we also need some for minting)!
           <br>
-          <br>
-          ...joking aside, we will need some SOL for minting.
         </p>
       </div>
       <div class="grid grid-cols-10 rows-3">
@@ -119,7 +122,7 @@
           5.
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left">
-          Now comes the fun part. Choose Devnet as the nwtwork and connect your Phantom wallet.
+          Now comes the fun part. Choose Devnet as the network and connect your Phantom wallet.
           Set a max supply and click 'Mint new Master NFT'!
           <br>
         </p>
@@ -145,13 +148,15 @@
           6.
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left">
-          We did it! We minted our first NFT on Solana. You can check the NFT by going to your wallet and clicking
+          We did it! We minted our first NFT on Solana. It should appear in your wallet now.
+          You can check the NFT by going to your wallet and clicking
           The 'Your Collectibles' tab (the second tab on Phantom).
           <br>
         </p>
       </div>
     </div>
   </div>
+  <Footer/>
 </template>
 
 <script lang="ts">
@@ -160,11 +165,13 @@ import ArweaveUpload from '@/components/ArweaveUpload.vue'
 import NFTMintForm from '@/components/NFTMintForm.vue'
 import { DEFAULTS } from '@/global'
 import ConfigPane from '@/components/ConfigPane.vue'
+import Footer from "@/components/Footer.vue";
 
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Home',
   components: {
+    Footer,
     ConfigPane,
     NFTMintForm,
     ArweaveUpload

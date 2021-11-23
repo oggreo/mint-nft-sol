@@ -36,7 +36,7 @@
       <a v-if="imageUrl" :href="this.imageUrl" class="font-bold underline"> Check here </a>
     </div>
     <br>
-    <div v-if="metaUrl">
+    <div v-if="metaUrl" class="mb-5">
       MetaData successfully uploaded to Arweave!
       <a v-if="metaUrl" :href="this.metaUrl" class="font-bold underline"> Check here </a>
     </div>
