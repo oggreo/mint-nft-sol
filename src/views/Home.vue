@@ -32,7 +32,7 @@
           <a href="https://phantom.app/" class="font-bold underline" target="_blank">here</a>.
           If you already have one you can skip this part.
         </p>
-        <p class="col-start-2 col-end-10 my-2 break-word text-left row-start-2">
+        <p class="col-start-2 col-end-10 my-2 break-word text-left row-start-2 text-focus-purple font-black">
           Copy and paste your wallet address (public key) here:
         </p>
         <div class="py-4 col-start-2 col-end-10 row-start-3">
@@ -51,12 +51,12 @@
           2.
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left">
-          Next, you need to create an Arweave account.
+          Next, you need to <span class="text-focus-purple font-black">create an Arweave account. </span>
           Follow the instructions <a href="https://faucet.arweave.net/" class="font-bold underline" target="_blank">here</a> to get free AR.
           You'll need some to get started.
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left row-start-2">
-          Make sure to save your new Arweave wallet (.JSON key file). You will need to feed it in the app to
+          Make sure to <span class="text-focus-purple font-black"> save your new Arweave wallet (.JSON key file). </span> You will need to feed it in the app to
           upload your assets to permaweb.
           <br>
           (Ideally this should be done by authenticating through the browser extension wallet but I haven't
@@ -76,7 +76,7 @@
           3.
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left">
-          The asset to be minted was stored on the permaweb, a decentralised immutable storage.
+          <span class="text-focus-purple font-black"> Now let's store the asset on the permaweb, </span> a decentralised immutable storage.
           You can read more about permaweb <a href="https://arweave.medium.com/welcome-to-the-permaweb-ce0e6c73ddfb" class="font-bold underline" target="_blank">here</a>.
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left row-start-2">
@@ -101,8 +101,9 @@
           4.
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left">
-          Now let's open your Phantom wallet and switch to Devnet. Currently chosen Mainnet uses 'actual' SOL
-          which is very expensive, so instead we can use a 'testing' network that allows us to play around for free.
+          <span class="text-focus-purple font-black"> Now let's open your Phantom wallet and switch to Devnet. </span>
+          Currently chosen Mainnet uses 'actual' SOL which is very expensive, so instead we can use a 'testing' network
+          that allows us to play around for free.
           <br>
         </p>
         <ul class="col-start-2 col-end-10 my-2 break-word text-left row-start-2">
@@ -112,7 +113,11 @@
           <li>4. Change to Devnet</li>
         </ul>
         <p class="col-start-2 col-end-10 my-2 break-word text-left row-start-3">
-          Once you are done, air-drop yourself some SOL using a <a href="https://solfaucet.com/" class="font-bold underline" target="_blank">faucet</a>
+          Once you are done,
+          <span class="text-focus-purple font-black">
+          air-drop yourself some SOL using a
+          </span>
+          <a href="https://solfaucet.com/" class="font-bold underline" target="_blank">faucet</a>
           and make yourself feel rich (and we also need some for minting)!
           <br>
         </p>
@@ -122,8 +127,14 @@
           5.
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left">
-          Now comes the fun part. Choose Devnet as the network and connect your Phantom wallet.
-          Set a max supply and click 'Mint new Master NFT'!
+          Now comes the fun part.
+          <span class="text-focus-purple font-black">
+          Choose Devnet as the network and connect your Phantom wallet.
+          </span>
+          Set a max supply and
+          <span class="text-focus-purple font-black">
+          click 'Mint new Master NFT'!
+          </span>
           <br>
         </p>
       </div>
@@ -148,7 +159,10 @@
           6.
         </p>
         <p class="col-start-2 col-end-10 my-2 break-word text-left">
-          We did it! We minted our first NFT on Solana. It should appear in your wallet now.
+          <span class="text-focus-purple font-black">
+          We did it! We minted our first NFT on Solana!
+          </span>
+          It should appear in your wallet now.
           You can check the NFT by going to your wallet and clicking
           The 'Your Collectibles' tab (the second tab on Phantom).
           <br>
