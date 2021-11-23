@@ -5,7 +5,7 @@
       <span> Made with ❤️ from Leeds @ 2021</span>
       <span class="text-center">
         <a
-          href="https://github.com/oggreo"
+          href="https://github.com/oggreo/mint-nft-sol"
           target="_blank"
         >
           <i class="fab fa-github"></i>
