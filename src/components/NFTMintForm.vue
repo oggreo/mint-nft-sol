@@ -14,11 +14,11 @@
   </div>
   <form v-if="chosenNFTType === 'master'" class="mt-10" @submit.prevent="mintNewMaster">
 <!--    {{ uri }}-->
-<!--    <div class="nes-field">-->
+<!--    <div class="">-->
 <!--      <div>-->
 <!--        <label for="uri">Arweave / IPFS URI:</label>-->
 <!--      </div>-->
-<!--      <input type="text" id="uri" class="nes-input"  />-->
+<!--      <input type="text" id="uri" class=""  />-->
 <!--    </div>-->
     <div class="mt-5">
       <label for="maxSupply">Max Supply (leave blank for uncapped): </label>
@@ -43,7 +43,7 @@
   <!--  <label for="toAddress">To address:</label>-->
   <!--  <input id='toAddress' type="text" v-model="toAddress" />-->
   <!--  <button-->
-  <!--      class="nes-btn is-primary mt-5"-->
+  <!--      class="is-primary mt-5"-->
   <!--      :disabled="!isConnected || uri === null"-->
   <!--      type="submit"-->
   <!--      @click="sendNFT"-->
