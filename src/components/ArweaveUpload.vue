@@ -26,6 +26,11 @@
       </button>
       </div>
     </div>
+    <!-- Error -->
+    <div v-if="error === true">
+      There is an error! Make sure your wallet address is correct,
+      selected the correct wallet .JSON file, or the image is in PNG (non-image file, or other extensions will fail).
+    </div>
     <!--  Loading  -->
     <div v-if="isUploading === true">
       ...Loading
@@ -57,6 +62,7 @@ export default {
   },
   data () {
     return {
+      error: null,
       arweave:
         Arweave.init({
           host: 'arweave.net', // Hostname or IP address for a Arweave host
@@ -165,35 +171,42 @@ export default {
     },
     startUpload () {
       this.isUploading = true
+      this.error = false
     },
     async uploadToArweave () {
-      this.startUpload()
-      for (const row of this.meta) {
-        // upload image
-        const { Name: name, ...props } = row
-        const nameByNumber = Number.parseInt(name)
-        const newItem = {}
-        const contentType = ['Content-Type', 'image/png']
-        const data = this.blob
-        const { id } = await this.runUploadOnArweave(data, contentType, true)
-        const imageUrl = id ? `https://arweave.net/${id}` : undefined
-        console.log('imageUrl', imageUrl)
-        this.imageUrl = imageUrl
-        // upload meta
-        const attributes = this.getAttributes(props)
-        const metadata = this.getMetadata(name, imageUrl, attributes)
-        const metaContentType = ['Content-Type', 'application/json']
-        const metadataString = JSON.stringify(metadata)
-        const { id: metadataId } = await this.runUploadOnArweave(
-          metadataString,
-          metaContentType
-        )
-        const metadataUrl = id
-          ? `https://arweave.net/${metadataId}`
-          : undefined
-        this.metaUrl = metadataUrl
+      try{
+        this.startUpload()
+        for (const row of this.meta) {
+          // upload image
+          const { Name: name, ...props } = row
+          const nameByNumber = Number.parseInt(name)
+          const newItem = {}
+          const contentType = ['Content-Type', 'image/png']
+          const data = this.blob
+          const { id } = await this.runUploadOnArweave(data, contentType, true)
+          const imageUrl = id ? `https://arweave.net/${id}` : undefined
+          console.log('imageUrl', imageUrl)
+          this.imageUrl = imageUrl
+          // upload meta
+          const attributes = this.getAttributes(props)
+          const metadata = this.getMetadata(name, imageUrl, attributes)
+          const metaContentType = ['Content-Type', 'application/json']
+          const metadataString = JSON.stringify(metadata)
+          const { id: metadataId } = await this.runUploadOnArweave(
+            metadataString,
+            metaContentType
+          )
+          const metadataUrl = id
+            ? `https://arweave.net/${metadataId}`
+            : undefined
+          this.metaUrl = metadataUrl
+          this.isUploading = false
+          this.$emit('imageUploaded', metadataUrl)
+        }
+      } catch (e) {
+        console.log('e', e)
+        this.error = true
         this.isUploading = false
-        this.$emit('imageUploaded', metadataUrl)
       }
     },
     onFileClick (e) {
